@@ -28,7 +28,10 @@ n_days = int(os.getenv("N_DAYS"))
 
 # Configure logging to a file
 log_file = "error.log"
-logging.basicConfig(filename=log_file, level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# def operating_system():
+#     ops=input("Enter 1 for Windows and 2 for Linux")
 
 def get_ip_address():
     hostname = socket.gethostname()    
@@ -47,7 +50,7 @@ def get_drives():
         logging.error(f"Error retrieving drive information: {str(e)}", exc_info=True)
     return drives
 
-# Define a custom exception class for file-related errors
+# Define a cuhostname = socket.gethostname()  stom exception class for file-related errors
 class FileError(Exception):
     pass
 
@@ -93,6 +96,8 @@ def search_files(root_dir, extensions, n_days, sensitive_patterns):
     return found_assets
 
 def upsert_to_database(file_path, connection):
+    hostname = socket.gethostname()
+    ipaddrs = socket.gethostbyname(hostname)   
     cursor = connection.cursor()
     file_size = os.path.getsize(file_path)
     file_name = os.path.basename(file_path)
@@ -103,11 +108,11 @@ def upsert_to_database(file_path, connection):
 
     # Perform an upsert based on file_path
     cursor.execute('''
-        INSERT INTO file_name_info (file_path, file_size, file_name, file_extension, modification_time, access_time, creation_time)
-        VALUES (%s, %s, %s, %s, %s, %s, %s)
+        INSERT INTO file_name_info (ipaddrs,hostname,file_path, file_size, file_name, file_extension, modification_time, access_time, creation_time)
+        VALUES (%s,%s,%s, %s, %s, %s, %s, %s, %s)
         ON DUPLICATE KEY UPDATE
         file_size = %s, file_name = %s, file_extension = %s, modification_time = %s, access_time = %s, creation_time = %s;
-    ''', (file_path, file_size, file_name, file_extension, modification_time, access_time, creation_time,
+    ''', (ipaddrs,hostname,file_path, file_size, file_name, file_extension, modification_time, access_time, creation_time,
        file_size, file_name, file_extension, modification_time, access_time, creation_time))
     connection.commit()
 
@@ -223,9 +228,11 @@ def create_xls_file_sheet_row_table(connection, xls_files):
                     col_data_1, col_data_2, col_data_3, col_data_4, col_data_5,
                     col_data_6, col_data_7, col_data_8, col_data_9, col_data_10, is_truncate)
                     VALUES (
-                    (SELECT xls_file_sheet_pk FROM xls_file_sheet WHERE sheet_name = %s ),
+                    (SELECT xls_file_sheet_pk FROM xls_file_sheet WHERE sheet_name = %s LIMIT 1),
                     %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
-                    );
+                    )ON DUPLICATE KEY UPDATE
+                               col_no=VALUES(col_no),
+                               row_no=VALUES(row_no);
                     ''', (sheet_name, sheet_name, num_cols, row_idx + 1, is_row, *col_data, is_truncate))
                     connection.commit()
         print("Tables for .xls file rows created and data inserted.")
@@ -254,42 +261,120 @@ def create_audit_table(connection, ip, start_time, end_time, elapsed_time):
         print("Table for audit created and data inserted.")
     except Exception as e:
         logging.error(f"Error creating audit table and inserting data: {str(e)}", exc_info=True)
+def windows():
+        drives = get_drives()
+        extension=(".xls",".xlsx")
+        if not drives:
+            print("No drives found.")
+        else:
+            print("Available drives:")
+            for i, drive in enumerate(drives, start=1):
+                print(f"{i}. {drive}")
 
+            scan_option = input("Choose an option:\n1. All Drive Scan\n2. Specific Drive Scan\nEnter the option (A or S): ")
 
-if __name__ == "__main__":
-    start_time = time.time()
-    drives = get_drives()
-    extension=(".xls",".xlsx")
-    if not drives:
-        print("No drives found.")
-    else:
-        print("Available drives:")
-        for i, drive in enumerate(drives, start=1):
-            print(f"{i}. {drive}")
-
-        scan_option = input("Choose an option:\n1. Full Scan\n2. Drive-specific Scan\nEnter the option number (1 or 2): ")
-
-        try:
-            if scan_option == '1':
-                print(f"Performing a full scan for data assets modified or accessed in the last {n_days} days:")
-                found_assets = []
-                for drive in drives:
-                    found_assets.extend(search_files(drive, file_extensions, n_days, sensitive_patterns))
-            elif scan_option == '2':
-                drive_choice = input("Enter the drive letter to scan (e.g., C, D, E, ...): ").upper()
-                if drive_choice in [d[0] for d in drives]:
-                    selected_drive = [d for d in drives if d[0] == drive_choice][0]
-                    print(f"Scanning {selected_drive} for data assets modified or accessed in the last {n_days} days:")
-                    found_assets = search_files(selected_drive, file_extensions, n_days, sensitive_patterns)
-                else:
-                    print("Invalid drive choice.")
+            try:
+                if scan_option == 'A' or scan_option=='a':
+                    print(f"Performing a full scan for data assets modified or accessed in the last {n_days} days:")
                     found_assets = []
-            else:
-                print("Invalid option. Please choose 1 for Full Scan or 2 for Drive-specific Scan.")
-                found_assets = []
-        except ValueError:
-            print("Invalid input. Please enter a valid option or drive letter.")
+                    for drive in drives:
+                        found_assets.extend(search_files(drive, file_extensions, n_days, sensitive_patterns))
+                elif scan_option == 'S'or scan_option=='s':
+                    drive_choice = input("Enter the drive letter to scan (e.g., C:\, D:\, E:\, ...) or drive path: ").upper()
+                    # if drive_choice in [d[0] for d in drives]:
+                    # selected_drive = [d for d in drives if d[0] == drive_choice][0]
+                    print(f"Scanning {drive_choice} for data assets modified or accessed in the last {n_days} days:")
+                    found_assets = search_files(drive_choice, file_extensions, n_days, sensitive_patterns)
+                    # else:
+                    #     print("Invalid drive choice.")
+                    #     found_assets = []
+                else:
+                    print("Invalid option. Please choose 1 for Full Scan or 2 for Drive-specific Scan.")
+                    found_assets = []
+            except ValueError:
+                print("Invalid input. Please enter a valid option or drive letter.")
 
+            connection = None
+            try:
+                connection = mysql.connector.connect(
+                    host=host,
+                    port=port,
+                    database=database_name,
+                    user=username,
+                    password=password
+                )
+                # Create the file_name_info table if it doesn't exist
+                # create_dataassets_table(connection)
+
+                if found_assets:
+                    for asset in found_assets:
+                        upsert_to_database(asset, connection)
+                    print(f"Scan results for the last {n_days} days saved to the MySQL database.")
+                else:
+                    print("No data assets found.")
+            except Exception as e:
+                # Log the error to the log file
+                logging.error(f"Error connecting to the database: {str(e)}")
+            finally:
+                if connection:
+                    connection.close()
+            if ".xls" or ".xlsx" in file_extensions:
+                #xls_files = [file for file in found_assets if file.lower().endswith(".xls")]
+                xls_files = [file for file in found_assets if file.lower().endswith(extension)]
+                if xls_files:
+                    connection = mysql.connector.connect(
+                        host=host,
+                        port=port,
+                        database=database_name,
+                        user=username,
+                        password=password
+                    )
+                    create_xls_file_sheet_table(connection, xls_files)
+                    create_xls_file_sheet_row_table(connection, xls_files)
+                    connection.close()
+                else:
+                    print("No .xls files found.")
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        ip=get_ip_address()
+        connection = mysql.connector.connect(
+                host=host,
+                port=port,
+                database=database_name,
+                user=username,
+                password=password
+            )
+        create_audit_table(connection,ip,start_time,end_time,elapsed_time)
+        connection.close()
+
+def linux():
+        start_time = time.time()
+        root_dir = '/'
+        scan_option = input("Choose an option:\n1. Full Scan\n2. Path Scan\nEnter the option (F or P): ")
+        if scan_option == 'F' or scan_option=='f':
+                    print(f"Performing a full scan for data assets modified or accessed in the last {n_days} days:")
+                    found_assets = []
+                
+                    found_assets.extend(search_files(root_dir, file_extensions, n_days, sensitive_patterns))
+        elif scan_option == 'P'or scan_option=='p':
+                    path_choice = input("Enter the path: ").upper()
+                    # if drive_choice in [d[0] for d in drives]:
+                    # selected_drive = [d for d in drives if d[0] == drive_choice][0]
+                    print(f"Scanning {path_choice} for data assets modified or accessed in the last {n_days} days:")
+                    found_assets = search_files(path_choice, file_extensions, n_days, sensitive_patterns)
+                    # else:
+                    #     print("Invalid drive choice.")
+                    #     found_assets = []
+        else:
+                    print("Invalid option. Please choose 1 for Full Scan or 2 for Drive-specific Scan.")
+                    found_assets = []
+                
+        # On Linux, specify the root directory to scan
+        
+    
+        # Change this line to scan the root directory
+        # found_assets = search_files(root_dir, file_extensions, n_days, sensitive_patterns)
+    
         connection = None
         try:
             connection = mysql.connector.connect(
@@ -314,9 +399,8 @@ if __name__ == "__main__":
         finally:
             if connection:
                 connection.close()
-        if ".xls" or ".xlsx" in file_extensions:
-            #xls_files = [file for file in found_assets if file.lower().endswith(".xls")]
-            xls_files = [file for file in found_assets if file.lower().endswith(extension)]
+        if ".xls" in file_extensions or ".xlsx" in file_extensions:
+            xls_files = [file for file in found_assets if file.lower().endswith((".xls", ".xlsx"))]
             if xls_files:
                 connection = mysql.connector.connect(
                     host=host,
@@ -329,16 +413,30 @@ if __name__ == "__main__":
                 create_xls_file_sheet_row_table(connection, xls_files)
                 connection.close()
             else:
-                print("No .xls files found.")
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    ip=get_ip_address()
-    connection = mysql.connector.connect(
-            host=host,
-            port=port,
-            database=database_name,
-            user=username,
-            password=password
-        )
-    create_audit_table(connection,ip,start_time,end_time,elapsed_time)
-    connection.close()
+                print("No .xls or .xlsx files found.")
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        ip = get_ip_address()
+        connection = mysql.connector.connect(
+                host=host,
+                port=port,
+                database=database_name,
+                user=username,
+                password=password
+            )
+        create_audit_table(connection, ip, start_time, end_time, elapsed_time)
+        connection.close()
+
+    
+
+if __name__ == "__main__":
+    start_time = time.time()
+    ops=input("Choose an option:\n1.Windows\n2. Linux\nEnter the option (W or L): ")
+    if ops=='W' or ops=='w':
+        windows()
+        
+    elif ops=='L'or ops=='l':
+        linux()
+    else:
+        print("Incorrect input")
+        
