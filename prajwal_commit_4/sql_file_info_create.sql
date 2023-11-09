@@ -17,6 +17,8 @@ CREATE TABLE `machine_info` (
 
 CREATE TABLE `file_name_info` (
   `file_name_info_pk` int NOT NULL AUTO_INCREMENT,
+  `ipaddrs` varchar(25) DEFAULT NULL,
+  `hostname` varchar(255) DEFAULT NULL,
   `file_path` varchar(255) DEFAULT NULL,
   `file_size` bigint DEFAULT NULL,
   `file_name` varchar(255) DEFAULT NULL,
