@@ -357,7 +357,7 @@ def linux():
                 
                     found_assets.extend(search_files(root_dir, file_extensions, n_days, sensitive_patterns))
         elif scan_option == 'P'or scan_option=='p':
-                    path_choice = input("Enter the path: ").upper()
+                    path_choice = input("Enter the path: ")
                     # if drive_choice in [d[0] for d in drives]:
                     # selected_drive = [d for d in drives if d[0] == drive_choice][0]
                     print(f"Scanning {path_choice} for data assets modified or accessed in the last {n_days} days:")
