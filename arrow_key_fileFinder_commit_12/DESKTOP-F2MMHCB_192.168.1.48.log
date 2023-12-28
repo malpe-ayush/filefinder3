@@ -1,0 +1,266 @@
+2023-12-28 00:08:36.115 | INFO     | __main__:<module>:911 - ********************Start-Log********************
+2023-12-28 00:08:36.115 | INFO     | __main__:<module>:912 - Your IP Address:, 192.168.1.48
+2023-12-28 00:08:36.115 | INFO     | __main__:<module>:913 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 00:08:36.115 | INFO     | __main__:<module>:914 - Operating System: Windows
+2023-12-28 00:08:36.115 | INFO     | __main__:<module>:915 - OS Version: 10
+2023-12-28 00:08:36.115 | INFO     | __main__:<module>:916 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 00:09:14.572 | SUCCESS  | __main__:windows:695 - The File Scanning is now complete!! Please wait while we insert the data into the database.
+2023-12-28 00:09:14.586 | SUCCESS  | __main__:insert_f_machine_files_summary_count:643 - Data inserted into f_machine_files_summary_count table.
+2023-12-28 00:09:15.084 | INFO     | __main__:windows:726 - Scan results for the last {n_days} days saved to the MySQL database.
+2023-12-28 00:09:15.084 | INFO     | __main__:windows:729 - Scan result inserted into details table.
+2023-12-28 00:09:15.092 | SUCCESS  | __main__:create_audit_table:503 - Data inserted into audit_info table.
+2023-12-28 00:09:15.092 | INFO     | __main__:<module>:963 - ********************End-Log********************
+2023-12-28 00:10:33.146 | INFO     | __main__:<module>:912 - ********************Start-Log********************
+2023-12-28 00:10:33.146 | INFO     | __main__:<module>:913 - Your IP Address:, 192.168.1.48
+2023-12-28 00:10:33.146 | INFO     | __main__:<module>:914 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 00:10:33.146 | INFO     | __main__:<module>:915 - Operating System: Windows
+2023-12-28 00:10:33.146 | INFO     | __main__:<module>:916 - OS Version: 10
+2023-12-28 00:10:33.146 | INFO     | __main__:<module>:917 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 00:10:37.771 | SUCCESS  | __main__:create_db_connection:70 - Db connection commpleted
+2023-12-28 00:10:51.197 | SUCCESS  | __main__:windows:696 - The File Scanning is now complete!! Please wait while we insert the data into the database.
+2023-12-28 00:10:51.210 | SUCCESS  | __main__:insert_f_machine_files_summary_count:644 - Data inserted into f_machine_files_summary_count table.
+2023-12-28 00:10:51.432 | INFO     | __main__:windows:727 - Scan results for the last {n_days} days saved to the MySQL database.
+2023-12-28 00:10:51.440 | INFO     | __main__:windows:730 - Scan result inserted into details table.
+2023-12-28 00:10:51.450 | SUCCESS  | __main__:create_audit_table:504 - Data inserted into audit_info table.
+2023-12-28 00:10:51.450 | INFO     | __main__:<module>:964 - ********************End-Log********************
+2023-12-28 02:47:22.353 | INFO     | __main__:<module>:968 - ********************Start-Log********************
+2023-12-28 02:47:22.353 | INFO     | __main__:<module>:969 - Your IP Address:, 192.168.1.48
+2023-12-28 02:47:22.353 | INFO     | __main__:<module>:970 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 02:47:22.353 | INFO     | __main__:<module>:971 - Operating System: Windows
+2023-12-28 02:47:22.353 | INFO     | __main__:<module>:972 - OS Version: 10
+2023-12-28 02:47:22.353 | INFO     | __main__:<module>:973 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 02:47:30.159 | SUCCESS  | __main__:create_db_connection:70 - Db connection successful
+2023-12-28 02:48:43.672 | INFO     | __main__:<module>:968 - ********************Start-Log********************
+2023-12-28 02:48:43.673 | INFO     | __main__:<module>:969 - Your IP Address:, 192.168.1.48
+2023-12-28 02:48:43.673 | INFO     | __main__:<module>:970 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 02:48:43.674 | INFO     | __main__:<module>:971 - Operating System: Windows
+2023-12-28 02:48:43.674 | INFO     | __main__:<module>:972 - OS Version: 10
+2023-12-28 02:48:43.674 | INFO     | __main__:<module>:973 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 02:48:49.708 | SUCCESS  | __main__:create_db_connection:70 - Db connection successful
+2023-12-28 02:49:37.716 | INFO     | __main__:<module>:968 - ********************Start-Log********************
+2023-12-28 02:49:37.716 | INFO     | __main__:<module>:969 - Your IP Address:, 192.168.1.48
+2023-12-28 02:49:37.716 | INFO     | __main__:<module>:970 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 02:49:37.716 | INFO     | __main__:<module>:971 - Operating System: Windows
+2023-12-28 02:49:37.716 | INFO     | __main__:<module>:972 - OS Version: 10
+2023-12-28 02:49:37.716 | INFO     | __main__:<module>:973 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 02:49:50.262 | SUCCESS  | __main__:create_db_connection:70 - Db connection successful
+2023-12-28 02:56:31.442 | INFO     | __main__:<module>:968 - ********************Start-Log********************
+2023-12-28 02:56:31.442 | INFO     | __main__:<module>:969 - Your IP Address:, 192.168.1.48
+2023-12-28 02:56:31.442 | INFO     | __main__:<module>:970 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 02:56:31.442 | INFO     | __main__:<module>:971 - Operating System: Windows
+2023-12-28 02:56:31.443 | INFO     | __main__:<module>:972 - OS Version: 10
+2023-12-28 02:56:31.443 | INFO     | __main__:<module>:973 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 02:56:35.993 | SUCCESS  | __main__:create_db_connection:70 - Db connection successful
+2023-12-28 02:56:35.993 | INFO     | __main__:<module>:1027 - ********************Connection close********************
+2023-12-28 02:56:35.993 | ERROR    | __main__:<module>:1028 - Counting files with extensions: 1146 (42S02): Table 'lisney_files_info3.env_info' doesn't exist
+2023-12-28 02:56:35.993 | INFO     | __main__:<module>:1031 - ********************Connection close********************
+2023-12-28 02:56:59.929 | INFO     | __main__:<module>:968 - ********************Start-Log********************
+2023-12-28 02:56:59.929 | INFO     | __main__:<module>:969 - Your IP Address:, 192.168.1.48
+2023-12-28 02:56:59.929 | INFO     | __main__:<module>:970 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 02:56:59.929 | INFO     | __main__:<module>:971 - Operating System: Windows
+2023-12-28 02:56:59.929 | INFO     | __main__:<module>:972 - OS Version: 10
+2023-12-28 02:56:59.929 | INFO     | __main__:<module>:973 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 02:57:04.045 | SUCCESS  | __main__:create_db_connection:70 - Db connection successful
+2023-12-28 02:57:04.052 | INFO     | __main__:<module>:1027 - ********************Connection close********************
+2023-12-28 02:57:04.052 | ERROR    | __main__:<module>:1028 - Counting files with extensions: 1146 (42S02): Table 'lisney_files_info3.env_info' doesn't exist
+2023-12-28 02:57:04.052 | INFO     | __main__:<module>:1031 - ********************Connection close********************
+2023-12-28 02:59:54.929 | INFO     | __main__:<module>:967 - ********************Start-Log********************
+2023-12-28 02:59:54.929 | INFO     | __main__:<module>:968 - Your IP Address:, 192.168.1.48
+2023-12-28 02:59:54.929 | INFO     | __main__:<module>:969 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 02:59:54.929 | INFO     | __main__:<module>:970 - Operating System: Windows
+2023-12-28 02:59:54.929 | INFO     | __main__:<module>:971 - OS Version: 10
+2023-12-28 02:59:54.929 | INFO     | __main__:<module>:972 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 02:59:59.393 | SUCCESS  | __main__:create_db_connection:71 - Db connection successful
+2023-12-28 03:01:27.237 | INFO     | __main__:<module>:967 - ********************Start-Log********************
+2023-12-28 03:01:27.237 | INFO     | __main__:<module>:968 - Your IP Address:, 192.168.1.48
+2023-12-28 03:01:27.237 | INFO     | __main__:<module>:969 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 03:01:27.237 | INFO     | __main__:<module>:970 - Operating System: Windows
+2023-12-28 03:01:27.237 | INFO     | __main__:<module>:971 - OS Version: 10
+2023-12-28 03:01:27.237 | INFO     | __main__:<module>:972 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 03:01:33.209 | SUCCESS  | __main__:create_db_connection:71 - Db connection successful
+2023-12-28 03:05:31.333 | INFO     | __main__:<module>:967 - ********************Start-Log********************
+2023-12-28 03:05:31.341 | INFO     | __main__:<module>:968 - Your IP Address:, 192.168.1.48
+2023-12-28 03:05:31.341 | INFO     | __main__:<module>:969 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 03:05:31.341 | INFO     | __main__:<module>:970 - Operating System: Windows
+2023-12-28 03:05:31.341 | INFO     | __main__:<module>:971 - OS Version: 10
+2023-12-28 03:05:31.341 | INFO     | __main__:<module>:972 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 03:07:48.848 | ERROR    | __main__:create_db_connection:76 - Error getting db connection: 2003 (HY000): Can't connect to MySQL server on '192.168.1.13:3306' (10060)
+2023-12-28 03:08:54.603 | INFO     | __main__:<module>:967 - ********************Start-Log********************
+2023-12-28 03:08:54.603 | INFO     | __main__:<module>:968 - Your IP Address:, 192.168.1.48
+2023-12-28 03:08:54.603 | INFO     | __main__:<module>:969 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 03:08:54.603 | INFO     | __main__:<module>:970 - Operating System: Windows
+2023-12-28 03:08:54.604 | INFO     | __main__:<module>:971 - OS Version: 10
+2023-12-28 03:08:54.604 | INFO     | __main__:<module>:972 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 03:09:22.284 | ERROR    | __main__:create_db_connection:76 - Error getting db connection: 2003 (HY000): Can't connect to MySQL server on '192.168.1.13:3306' (10060)
+2023-12-28 03:12:28.478 | INFO     | __main__:<module>:967 - ********************Start-Log********************
+2023-12-28 03:12:28.478 | INFO     | __main__:<module>:968 - Your IP Address:, 192.168.1.48
+2023-12-28 03:12:28.478 | INFO     | __main__:<module>:969 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 03:12:28.478 | INFO     | __main__:<module>:970 - Operating System: Windows
+2023-12-28 03:12:28.478 | INFO     | __main__:<module>:971 - OS Version: 10
+2023-12-28 03:12:28.479 | INFO     | __main__:<module>:972 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 03:12:53.802 | ERROR    | __main__:create_db_connection:76 - Error getting db connection: 2003 (HY000): Can't connect to MySQL server on '192.168.1.13:3306' (10060)
+2023-12-28 03:24:47.100 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 03:24:47.101 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 03:24:47.101 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 03:24:47.101 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 03:24:47.101 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 03:24:47.101 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 03:25:03.969 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 03:25:03.969 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 03:25:03.969 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 03:25:03.969 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 03:25:03.969 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 03:25:03.970 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:36:52.710 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 10:36:52.710 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 10:36:52.710 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 10:36:52.710 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 10:36:52.710 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 10:36:52.710 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:37:33.440 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 10:37:33.440 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 10:37:33.440 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 10:37:33.440 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 10:37:33.440 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 10:37:33.440 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:38:29.427 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 10:38:29.427 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 10:38:29.427 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 10:38:29.427 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 10:38:29.427 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 10:38:29.427 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:47:40.109 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 10:47:40.109 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 10:47:40.109 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 10:47:40.109 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 10:47:40.109 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 10:47:40.109 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:47:47.793 | SUCCESS  | __main__:create_db_connection:79 - Db connection successful
+2023-12-28 10:52:50.919 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 10:52:50.919 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 10:52:50.919 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 10:52:50.919 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 10:52:50.919 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 10:52:50.919 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:52:57.766 | SUCCESS  | __main__:create_db_connection:79 - Db connection successful
+2023-12-28 10:53:29.248 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 10:53:29.248 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 10:53:29.248 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 10:53:29.248 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 10:53:29.248 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 10:53:29.248 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:53:35.714 | SUCCESS  | __main__:create_db_connection:79 - Db connection successful
+2023-12-28 10:54:06.312 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 10:54:06.312 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 10:54:06.312 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 10:54:06.312 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 10:54:06.312 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 10:54:06.312 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 10:54:12.232 | SUCCESS  | __main__:create_db_connection:79 - Db connection successful
+2023-12-28 10:54:44.302 | ERROR    | __main__:search_files:343 - Error scanning files: 'NoneType' object is not iterable
+2023-12-28 10:54:44.302 | SUCCESS  | __main__:windows:763 - The File Scanning is now complete!! Please wait while we insert the data into the database.
+2023-12-28 10:54:44.302 | ERROR    | __main__:insert_f_machine_files_summary_count:715 - Error insert_f_machine_files_summary_count: 'NoneType' object has no attribute 'lower'
+2023-12-28 10:54:44.302 | WARNING  | __main__:windows:800 - No data assets found.
+2023-12-28 10:54:44.351 | SUCCESS  | __main__:create_audit_table:571 - Data inserted into audit_info table.
+2023-12-28 10:54:44.351 | INFO     | __main__:<module>:1029 - ********************End-Log********************
+2023-12-28 11:05:58.422 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 11:05:58.422 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 11:05:58.422 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:05:58.422 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 11:05:58.422 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 11:05:58.422 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:06:51.702 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 11:06:51.702 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 11:06:51.702 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:06:51.702 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 11:06:51.702 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 11:06:51.702 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:08:24.867 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 11:08:24.867 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 11:08:24.867 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:08:24.867 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 11:08:24.867 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 11:08:24.867 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:10:56.736 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 11:10:56.736 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 11:10:56.736 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:10:56.736 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 11:10:56.736 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 11:10:56.736 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:13:17.869 | INFO     | __main__:<module>:977 - ********************Start-Log********************
+2023-12-28 11:13:17.869 | INFO     | __main__:<module>:978 - Your IP Address:, 192.168.1.48
+2023-12-28 11:13:17.869 | INFO     | __main__:<module>:979 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:13:17.869 | INFO     | __main__:<module>:980 - Operating System: Windows
+2023-12-28 11:13:17.869 | INFO     | __main__:<module>:981 - OS Version: 10
+2023-12-28 11:13:17.869 | INFO     | __main__:<module>:982 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:17:05.136 | INFO     | __main__:<module>:978 - ********************Start-Log********************
+2023-12-28 11:17:05.136 | INFO     | __main__:<module>:979 - Your IP Address:, 192.168.1.48
+2023-12-28 11:17:05.136 | INFO     | __main__:<module>:980 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:17:05.136 | INFO     | __main__:<module>:981 - Operating System: Windows
+2023-12-28 11:17:05.136 | INFO     | __main__:<module>:982 - OS Version: 10
+2023-12-28 11:17:05.136 | INFO     | __main__:<module>:983 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:17:46.238 | INFO     | __main__:<module>:978 - ********************Start-Log********************
+2023-12-28 11:17:46.238 | INFO     | __main__:<module>:979 - Your IP Address:, 192.168.1.48
+2023-12-28 11:17:46.238 | INFO     | __main__:<module>:980 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:17:46.238 | INFO     | __main__:<module>:981 - Operating System: Windows
+2023-12-28 11:17:46.238 | INFO     | __main__:<module>:982 - OS Version: 10
+2023-12-28 11:17:46.238 | INFO     | __main__:<module>:983 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:21:46.121 | INFO     | __main__:<module>:978 - ********************Start-Log********************
+2023-12-28 11:21:46.121 | INFO     | __main__:<module>:979 - Your IP Address:, 192.168.1.48
+2023-12-28 11:21:46.121 | INFO     | __main__:<module>:980 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:21:46.121 | INFO     | __main__:<module>:981 - Operating System: Windows
+2023-12-28 11:21:46.121 | INFO     | __main__:<module>:982 - OS Version: 10
+2023-12-28 11:21:46.121 | INFO     | __main__:<module>:983 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:21:46.121 | INFO     | __main__:<module>:984 - database_name: lisney_files_info5
+2023-12-28 11:27:39.358 | INFO     | __main__:<module>:987 - ********************Start-Log********************
+2023-12-28 11:27:39.358 | INFO     | __main__:<module>:988 - Your IP Address:, 192.168.1.48
+2023-12-28 11:27:39.358 | INFO     | __main__:<module>:989 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:27:39.362 | INFO     | __main__:<module>:990 - Operating System: Windows
+2023-12-28 11:27:39.362 | INFO     | __main__:<module>:991 - OS Version: 10
+2023-12-28 11:27:39.362 | INFO     | __main__:<module>:992 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:29:10.144 | INFO     | __main__:<module>:987 - ********************Start-Log********************
+2023-12-28 11:29:10.144 | INFO     | __main__:<module>:988 - Your IP Address:, 192.168.1.48
+2023-12-28 11:29:10.144 | INFO     | __main__:<module>:989 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:29:10.144 | INFO     | __main__:<module>:990 - Operating System: Windows
+2023-12-28 11:29:10.144 | INFO     | __main__:<module>:991 - OS Version: 10
+2023-12-28 11:29:10.144 | INFO     | __main__:<module>:992 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:29:56.352 | INFO     | __main__:<module>:987 - ********************Start-Log********************
+2023-12-28 11:29:56.352 | INFO     | __main__:<module>:988 - Your IP Address:, 192.168.1.48
+2023-12-28 11:29:56.352 | INFO     | __main__:<module>:989 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:29:56.352 | INFO     | __main__:<module>:990 - Operating System: Windows
+2023-12-28 11:29:56.352 | INFO     | __main__:<module>:991 - OS Version: 10
+2023-12-28 11:29:56.352 | INFO     | __main__:<module>:992 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:30:27.097 | INFO     | __main__:<module>:987 - ********************Start-Log********************
+2023-12-28 11:30:27.097 | INFO     | __main__:<module>:988 - Your IP Address:, 192.168.1.48
+2023-12-28 11:30:27.097 | INFO     | __main__:<module>:989 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:30:27.097 | INFO     | __main__:<module>:990 - Operating System: Windows
+2023-12-28 11:30:27.097 | INFO     | __main__:<module>:991 - OS Version: 10
+2023-12-28 11:30:27.097 | INFO     | __main__:<module>:992 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:40:53.978 | INFO     | __main__:<module>:997 - ********************Start-Log********************
+2023-12-28 11:40:53.978 | INFO     | __main__:<module>:998 - Your IP Address:, 192.168.1.48
+2023-12-28 11:40:53.978 | INFO     | __main__:<module>:999 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:40:53.978 | INFO     | __main__:<module>:1000 - Operating System: Windows
+2023-12-28 11:40:53.978 | INFO     | __main__:<module>:1001 - OS Version: 10
+2023-12-28 11:40:53.978 | INFO     | __main__:<module>:1002 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:40:53.978 | INFO     | __main__:<module>:1003 - database_name: lisney_files_info5
+2023-12-28 11:51:33.968 | INFO     | __main__:<module>:1000 - ********************Start-Log********************
+2023-12-28 11:51:33.968 | INFO     | __main__:<module>:1001 - Your IP Address:, 192.168.1.48
+2023-12-28 11:51:33.968 | INFO     | __main__:<module>:1002 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:51:33.968 | INFO     | __main__:<module>:1003 - Operating System: Windows
+2023-12-28 11:51:33.968 | INFO     | __main__:<module>:1004 - OS Version: 10
+2023-12-28 11:51:33.970 | INFO     | __main__:<module>:1005 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:51:33.970 | INFO     | __main__:<module>:1006 - database_name: lisney_files_info5
+2023-12-28 11:55:26.609 | INFO     | __main__:<module>:1007 - ********************Start-Log********************
+2023-12-28 11:55:26.609 | INFO     | __main__:<module>:1008 - Your IP Address:, 192.168.1.48
+2023-12-28 11:55:26.609 | INFO     | __main__:<module>:1009 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 11:55:26.609 | INFO     | __main__:<module>:1010 - Operating System: Windows
+2023-12-28 11:55:26.609 | INFO     | __main__:<module>:1011 - OS Version: 10
+2023-12-28 11:55:26.609 | INFO     | __main__:<module>:1012 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 11:55:26.609 | INFO     | __main__:<module>:1013 - database_name: lisney_files_info5
+2023-12-28 12:18:01.307 | INFO     | __main__:<module>:1007 - ********************Start-Log********************
+2023-12-28 12:18:01.309 | INFO     | __main__:<module>:1008 - Your IP Address:, 192.168.1.48
+2023-12-28 12:18:01.309 | INFO     | __main__:<module>:1009 - Your Host Name: , DESKTOP-F2MMHCB
+2023-12-28 12:18:01.309 | INFO     | __main__:<module>:1010 - Operating System: Windows
+2023-12-28 12:18:01.309 | INFO     | __main__:<module>:1011 - OS Version: 10
+2023-12-28 12:18:01.309 | INFO     | __main__:<module>:1012 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2023-12-28 12:18:01.309 | INFO     | __main__:<module>:1013 - database_name: lisney_files_info5
