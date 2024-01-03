@@ -1,0 +1,44 @@
+DELIMITER //
+
+CREATE PROCEDURE InsertFileCounts()
+BEGIN
+    DECLARE done INT DEFAULT FALSE;
+    DECLARE hostname_value VARCHAR(255);
+    DECLARE file_extension_value VARCHAR(255);
+    DECLARE file_count_value INT;
+
+    -- Declare a cursor to select data
+    DECLARE file_cursor CURSOR FOR
+        SELECT 
+            hostname,
+            file_extension,
+            COUNT(*) AS file_count
+        FROM 
+            d_file_details
+        GROUP BY 
+            hostname, 
+            file_extension;
+
+    -- Declare continue handler to exit loop
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+    -- Open the cursor
+    OPEN file_cursor;
+
+    -- Loop through the data and insert into the table
+    file_loop: LOOP
+        FETCH file_cursor INTO hostname_value, file_extension_value, file_count_value;
+        IF done THEN
+            LEAVE file_loop;
+        END IF;
+
+        -- Insert into your_table_name with retrieved values, using INSERT IGNORE
+        INSERT IGNORE INTO your_table_name (hostname, file_extension, file_count)
+        VALUES (hostname_value, file_extension_value, file_count_value);
+    END LOOP;
+
+    -- Close the cursor
+    CLOSE file_cursor;
+END//
+
+DELIMITER ;
