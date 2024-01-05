@@ -1,0 +1,115 @@
+2024-01-04 01:02:53.867 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 01:02:53.867 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 01:02:53.868 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 01:02:53.868 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 01:02:53.868 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 01:02:53.868 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 01:02:53.869 | INFO     | __main__:<module>:946 - database_name: lisney_files_info4
+2024-01-04 01:05:23.029 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 01:05:23.029 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 01:05:23.029 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 01:05:23.029 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 01:05:23.030 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 01:05:23.030 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 01:05:23.030 | INFO     | __main__:<module>:946 - database_name: lisney_files_info4
+2024-01-04 01:05:34.474 | SUCCESS  | __main__:create_db_connection:75 - Database connection is commpleted 
+2024-01-04 01:09:43.342 | SUCCESS  | __main__:windows:668 - The File Scanning is now complete!! Please wait while we insert the data into the database.
+2024-01-04 01:09:43.343 | SUCCESS  | __main__:windows:697 - Windows Scan: insert_f_machine_files_summary_count in progress. Please Wait...
+2024-01-04 01:29:46.886 | SUCCESS  | __main__:insert_f_machine_files_summary_count:630 - Data inserted into f_machine_files_summary_count table.
+2024-01-04 01:29:46.888 | SUCCESS  | __main__:windows:701 - Windows Scan: insert_f_machine_files_summary_count complete. Please Wait......
+2024-01-04 01:29:49.561 | ERROR    | __main__:is_sensitive_file:284 - Error checking file for sensitive data: [Errno 22] Invalid argument
+2024-01-04 01:29:49.933 | INFO     | __main__:windows:711 - Scan results for the last {n_days} days saved to the MySQL database.
+2024-01-04 01:29:49.935 | INFO     | __main__:windows:714 - Scan result inserted into details table.
+2024-01-04 01:29:49.941 | SUCCESS  | __main__:create_audit_table:489 - Data inserted into audit_info table.
+2024-01-04 01:29:49.941 | INFO     | __main__:<module>:995 - ********************End-Log********************
+2024-01-04 05:05:51.620 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 05:05:51.620 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 05:05:51.621 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 05:05:51.621 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 05:05:51.621 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 05:05:51.621 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 05:05:51.621 | INFO     | __main__:<module>:946 - database_name: lisney_files_info4
+2024-01-04 05:06:04.333 | SUCCESS  | __main__:create_db_connection:75 - Database connection is commpleted 
+2024-01-04 05:07:55.371 | SUCCESS  | __main__:windows:668 - The File Scanning is now complete!! Please wait while we insert the data into the database.
+2024-01-04 05:07:55.373 | SUCCESS  | __main__:windows:697 - Windows Scan: insert_f_machine_files_summary_count in progress. Please Wait...
+2024-01-04 05:14:44.701 | SUCCESS  | __main__:insert_f_machine_files_summary_count:630 - Data inserted into f_machine_files_summary_count table.
+2024-01-04 05:14:44.702 | SUCCESS  | __main__:windows:701 - Windows Scan: insert_f_machine_files_summary_count complete. Please Wait......
+2024-01-04 05:14:45.517 | ERROR    | __main__:is_sensitive_file:284 - Error checking file for sensitive data: [Errno 22] Invalid argument
+2024-01-04 05:14:45.715 | INFO     | __main__:windows:711 - Scan results for the last {n_days} days saved to the MySQL database.
+2024-01-04 05:14:45.716 | INFO     | __main__:windows:714 - Scan result inserted into details table.
+2024-01-04 05:14:45.719 | SUCCESS  | __main__:create_audit_table:489 - Data inserted into audit_info table.
+2024-01-04 05:14:45.721 | INFO     | __main__:<module>:995 - ********************End-Log********************
+2024-01-04 05:20:21.366 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 05:20:21.366 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 05:20:21.366 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 05:20:21.366 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 05:20:21.366 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 05:20:21.366 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 05:20:21.367 | INFO     | __main__:<module>:946 - database_name: lisney_files_info4
+2024-01-04 05:20:53.986 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 05:20:53.986 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 05:20:53.986 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 05:20:53.986 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 05:20:53.986 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 05:20:53.987 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 05:20:53.987 | INFO     | __main__:<module>:946 - database_name: lisney_files_info4
+2024-01-04 05:21:06.121 | SUCCESS  | __main__:create_db_connection:75 - Database connection is commpleted 
+2024-01-04 05:21:09.660 | ERROR    | __main__:windows:686 - Invalid option selected.
+2024-01-04 05:21:09.662 | SUCCESS  | __main__:windows:697 - Windows Scan: insert_f_machine_files_summary_count in progress. Please Wait...
+2024-01-04 05:21:46.763 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 05:21:46.763 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 05:21:46.764 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 05:21:46.764 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 05:21:46.764 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 05:21:46.765 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 05:21:46.765 | INFO     | __main__:<module>:946 - database_name: lisney_files_info4
+2024-01-04 05:23:30.632 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 05:23:30.632 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 05:23:30.633 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 05:23:30.633 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 05:23:30.633 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 05:23:30.633 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 05:23:30.633 | INFO     | __main__:<module>:946 - database_name: lisney_files_info5
+2024-01-04 05:23:42.487 | SUCCESS  | __main__:create_db_connection:75 - Database connection is commpleted 
+2024-01-04 05:25:21.871 | SUCCESS  | __main__:windows:668 - The File Scanning is now complete!! Please wait while we insert the data into the database.
+2024-01-04 05:25:21.872 | SUCCESS  | __main__:windows:697 - Windows Scan: insert_f_machine_files_summary_count in progress. Please Wait...
+2024-01-04 05:32:19.761 | SUCCESS  | __main__:insert_f_machine_files_summary_count:630 - Data inserted into f_machine_files_summary_count table.
+2024-01-04 05:32:19.762 | SUCCESS  | __main__:windows:701 - Windows Scan: insert_f_machine_files_summary_count complete. Please Wait......
+2024-01-04 05:32:30.684 | INFO     | __main__:windows:711 - Scan results for the last {n_days} days saved to the MySQL database.
+2024-01-04 05:32:30.685 | INFO     | __main__:windows:714 - Scan result inserted into details table.
+2024-01-04 05:32:30.690 | SUCCESS  | __main__:create_audit_table:489 - Data inserted into audit_info table.
+2024-01-04 05:32:30.690 | INFO     | __main__:<module>:995 - ********************End-Log********************
+2024-01-04 07:58:53.267 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 07:58:53.268 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 07:58:53.268 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 07:58:53.268 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 07:58:53.268 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 07:58:53.268 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 07:58:53.268 | INFO     | __main__:<module>:946 - database_name: lisney_files_info5
+2024-01-04 08:01:03.108 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 08:01:03.108 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 08:01:03.108 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 08:01:03.108 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 08:01:03.108 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 08:01:03.108 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 08:01:03.109 | INFO     | __main__:<module>:946 - database_name: lisney_files_info5
+2024-01-04 08:04:02.616 | INFO     | __main__:<module>:940 - ********************Start-Log********************
+2024-01-04 08:04:02.616 | INFO     | __main__:<module>:941 - Your IP Address:, 192.168.1.48
+2024-01-04 08:04:02.616 | INFO     | __main__:<module>:942 - Your Host Name: , DESKTOP-F2MMHCB
+2024-01-04 08:04:02.617 | INFO     | __main__:<module>:943 - Operating System: Windows
+2024-01-04 08:04:02.617 | INFO     | __main__:<module>:944 - OS Version: 10
+2024-01-04 08:04:02.617 | INFO     | __main__:<module>:945 - System Information: uname_result(system='Windows', node='DESKTOP-F2MMHCB', release='10', version='10.0.22621', machine='AMD64')
+2024-01-04 08:04:02.617 | INFO     | __main__:<module>:946 - database_name: lisney_files_info6
+2024-01-04 08:04:17.564 | SUCCESS  | __main__:create_db_connection:75 - Database connection is commpleted 
+2024-01-04 08:08:05.477 | SUCCESS  | __main__:windows:668 - The File Scanning is now complete!! Please wait while we insert the data into the database.
+2024-01-04 08:08:05.478 | SUCCESS  | __main__:windows:697 - Windows Scan: insert_f_machine_files_summary_count in progress. Please Wait...
+2024-01-04 08:18:36.338 | SUCCESS  | __main__:insert_f_machine_files_summary_count:630 - Data inserted into f_machine_files_summary_count table.
+2024-01-04 08:18:36.339 | SUCCESS  | __main__:windows:701 - Windows Scan: insert_f_machine_files_summary_count complete. Please Wait......
+2024-01-04 08:19:37.201 | ERROR    | __main__:is_sensitive_file:284 - Error checking file for sensitive data: [Errno 22] Invalid argument
+2024-01-04 08:19:37.213 | ERROR    | __main__:is_sensitive_file:284 - Error checking file for sensitive data: [Errno 22] Invalid argument
+2024-01-04 08:19:37.289 | ERROR    | __main__:is_sensitive_file:284 - Error checking file for sensitive data: [Errno 22] Invalid argument
+2024-01-04 08:19:37.298 | ERROR    | __main__:is_sensitive_file:284 - Error checking file for sensitive data: [Errno 22] Invalid argument
+2024-01-04 08:19:44.589 | INFO     | __main__:windows:711 - Scan results for the last {n_days} days saved to the MySQL database.
+2024-01-04 08:19:44.590 | INFO     | __main__:windows:714 - Scan result inserted into details table.
+2024-01-04 08:19:44.625 | SUCCESS  | __main__:create_audit_table:489 - Data inserted into audit_info table.
+2024-01-04 08:19:44.626 | INFO     | __main__:<module>:995 - ********************End-Log********************
