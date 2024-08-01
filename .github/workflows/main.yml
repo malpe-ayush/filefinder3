@@ -1,58 +1,56 @@
-name: CI Workflow
+name: CI/CD Pipeline
 
 on:
   pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
+    types: [opened, synchronize, reopened]
 
 jobs:
-  build_and_test:
+  test:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.8'  # Specify your Python version here
-    
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        # Optionally install additional dependencies from other files
-        if [ -f "requirements - Linux.txt" ]; then
-          pip install -r "requirements - Linux.txt"
-        fi
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Run Python scripts
-      run: |
-        python file_info_mapfolders.py
-        python file_info_version_22.py
-        python machine_info_migration_centre.py
-        # Add commands to run other scripts if needed
-    
-    - name: Run SQL scripts (example with SQL tools installed)
-      run: |
-        # Ensure you have SQL tools installed and set up
-        # This is a placeholder; replace with actual commands if needed
-        # e.g., mysql -u user -p password < SQLScripts/sql_Cased_Dimensions14Jan2024_v2.sql
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Validate Results
-      run: |
-        # Add commands to validate results if needed
-        # Example: check if expected output files are created
-        if [ ! -f "expected_output.txt" ]; then
-          echo "Expected output file is missing!"
-          exit 1
-        fi
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements - Linux.txt ]; then pip install -r requirements - Linux.txt; fi
 
-    - name: Notify on Failure
-      if: failure()
-      run: |
-        echo "Build or tests failed. Please check the logs for details."
-        exit 1
+      - name: Run Python tests
+        run: |
+          pytest  # or specify other test commands depending on your setup
+
+      - name: Run PowerShell script
+        if: ${{ needs.tests.outcome == 'success' }}
+        run: pwsh PowerShell/PS__ArunV2_Final_8Feb2024.ps1
+
+      - name: Run SQL scripts
+        if: ${{ needs.tests.outcome == 'success' }}
+        run: |
+          # Add your commands to run SQL scripts or use a dedicated SQL action
+
+      - name: Notify on failure
+        if: ${{ failure() }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          host: smtp.mailgun.org
+          port: 587
+          username: ${{ secrets.MAILGUN_USERNAME }}
+          password: ${{ secrets.MAILGUN_PASSWORD }}
+          to: recipient@example.com
+          subject: 'GitHub Actions Workflow Failed'
+          body: 'The workflow failed. Please check the logs for details.'
+
+      - name: Merge changes (only if successful)
+        if: ${{ success() }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git commit -am "Automated merge after successful tests"
+          git push origin HEAD:main
