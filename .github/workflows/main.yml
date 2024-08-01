@@ -30,23 +30,6 @@ jobs:
         if: ${{ needs.tests.outcome == 'success' }}
         run: pwsh PowerShell/PS__ArunV2_Final_8Feb2024.ps1
 
-      - name: Run SQL scripts
-        if: ${{ needs.tests.outcome == 'success' }}
-        run: |
-          # Add your commands to run SQL scripts or use a dedicated SQL action
-
-      - name: Notify on failure
-        if: ${{ failure() }}
-        uses: dawidd6/action-send-mail@v3
-        with:
-          host: smtp.mailgun.org
-          port: 587
-          username: ${{ secrets.MAILGUN_USERNAME }}
-          password: ${{ secrets.MAILGUN_PASSWORD }}
-          to: recipient@example.com
-          subject: 'GitHub Actions Workflow Failed'
-          body: 'The workflow failed. Please check the logs for details.'
-
       - name: Merge changes (only if successful)
         if: ${{ success() }}
         run: |
