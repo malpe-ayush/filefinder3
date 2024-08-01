@@ -1,1 +1,58 @@
+name: CI Workflow
 
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'  # Specify your Python version here
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        # Optionally install additional dependencies from other files
+        if [ -f "requirements - Linux.txt" ]; then
+          pip install -r "requirements - Linux.txt"
+        fi
+
+    - name: Run Python scripts
+      run: |
+        python file_info_mapfolders.py
+        python file_info_version_22.py
+        python machine_info_migration_centre.py
+        # Add commands to run other scripts if needed
+    
+    - name: Run SQL scripts (example with SQL tools installed)
+      run: |
+        # Ensure you have SQL tools installed and set up
+        # This is a placeholder; replace with actual commands if needed
+        # e.g., mysql -u user -p password < SQLScripts/sql_Cased_Dimensions14Jan2024_v2.sql
+
+    - name: Validate Results
+      run: |
+        # Add commands to validate results if needed
+        # Example: check if expected output files are created
+        if [ ! -f "expected_output.txt" ]; then
+          echo "Expected output file is missing!"
+          exit 1
+        fi
+
+    - name: Notify on Failure
+      if: failure()
+      run: |
+        echo "Build or tests failed. Please check the logs for details."
+        exit 1
