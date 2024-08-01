@@ -18,51 +18,50 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Updated to use a newer version
 
-    - name: Set up ${{ matrix.language }}
+    - name: Set up ${{ matrix.language }} environment
       if: matrix.language == 'python'
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4  # Updated to use a newer version
       with:
         python-version: '3.x'
     
-    - name: Set up ${{ matrix.language }}
+    - name: Set up ${{ matrix.language }} environment
       if: matrix.language == 'javascript'
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3  # Updated to use a newer version
       with:
-        node-version: '14'
+        node-version: '16'
     
-    - name: Set up ${{ matrix.language }}
+    - name: Set up ${{ matrix.language }} environment
       if: matrix.language == 'java'
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3  # Updated to use a newer version
       with:
         java-version: '11'
+        distribution: 'adopt'  # Specify the distribution for Java
 
-    - name: Install dependencies
+    - name: Install dependencies for Python
       if: matrix.language == 'python'
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Install dependencies
+    - name: Install dependencies for JavaScript
       if: matrix.language == 'javascript'
       run: npm install
 
-    - name: Install dependencies
+    - name: Install dependencies for Java
       if: matrix.language == 'java'
-      run: |
-        ./gradlew build
-        ./gradlew test
+      run: ./gradlew build
 
-    - name: Run tests
+    - name: Run tests for Python
       if: matrix.language == 'python'
       run: python -m unittest discover
 
-    - name: Run tests
+    - name: Run tests for JavaScript
       if: matrix.language == 'javascript'
       run: npm test
 
-    - name: Run tests
+    - name: Run tests for Java
       if: matrix.language == 'java'
       run: ./gradlew test
 
