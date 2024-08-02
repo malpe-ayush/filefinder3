@@ -10,41 +10,39 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '<=3.8' # Use the version you need
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
 
-      - name: Install dependencies
-        run: |
-          pip install -r FileFinder_19/requirements.txt
-          pip install pytest
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r FileFinder_19/requirements.txt
+        pip install flake8  # Install flake8
 
-      - name: Run tests
-        run: |
-          pytest --maxfail=1 --disable-warnings -q
+    - name: Lint with flake8
+      run: flake8 .  # Run flake8 for linting
 
-      - name: Check output
-        run: |
-          # Add commands to validate the output if needed
-          echo "Output validation step (customize as needed)"
-        
-      - name: Commit changes if tests pass
-        if: success()
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'actions@github.com'
-          git add .
-          git commit -m 'Automated commit by GitHub Actions'
-          git push
+    - name: Run Scripts
+      run: |
+        python FileFinder_19/file_info_mapfolders.py
+        python FileFinder_19/file_info_version_22.py
+        python FileFinder_19/machine_info_migration_centre.py
 
-      - name: Notify on failure
-        if: failure()
-        run: |
-          echo "Test failed or output validation error. Please check the logs for details."
+    - name: Run PowerShell Script
+      run: pwsh PowerShell/PS__ArunV2_Final_8Feb2024.ps1
+
+    - name: Install PostgreSQL
+      run: choco install postgresql
+
+    - name: Run SQL Scripts
+      run: |
+        psql -f SQLScripts/lisney_files_info8_bp_14Feb2024.sql
+        psql -f SQLScripts/sql_Cased_Dimensions14Jan2024_v2.sql
