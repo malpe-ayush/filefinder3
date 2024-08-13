@@ -6,7 +6,7 @@ authors = ["Malhar <malharpatil45@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
 altgraph = "0.17.4"
 build = "1.0.3"
 cachecontrol = "0.13.1"
@@ -69,7 +69,6 @@ wcwidth = "0.2.12"
 xlrd = "2.0.1"
 zipp = "3.17.0"
 keyboard = "0.13.5"
-
 
 [build-system]
 requires = ["poetry-core"]
