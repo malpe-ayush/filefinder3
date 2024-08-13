@@ -14,16 +14,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          # Specify a compatible Python version range
-          python-version: '>=3.11,<3.13'
+          # Specify an exact compatible Python version
+          python-version: '3.11'
 
       - name: Install Poetry
-        uses: abatilo/actions-poetry@v2
+        uses: abatilo/actions-poetry@v3
 
       - name: Configure Poetry for a local virtual environment
         run: |
