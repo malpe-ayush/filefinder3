@@ -19,7 +19,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.12'  # Specify a compatible Python version
+          # Specify a compatible Python version range
+          python-version: '>=3.11,<3.13'
 
       - name: Install Poetry
         uses: abatilo/actions-poetry@v2
