@@ -19,6 +19,7 @@ import keyboard
 import subprocess
 import win32net
 from loguru import logger
+pip install pywin32
 enable_env_from_db = os.getenv("ENABLE_ENV_FROM_DB")
 #####################
 #Variables that can be fetched from database or .env
