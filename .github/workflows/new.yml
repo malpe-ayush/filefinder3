@@ -19,7 +19,6 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          # Specify an exact compatible Python version
           python-version: '3.11'
 
       - name: Install Poetry
@@ -33,7 +32,7 @@ jobs:
       - name: Define cache for Poetry virtual environment
         uses: actions/cache@v3
         with:
-          path: ./.venv
+          path: FileFinder_19/.venv
           key: venv-${{ hashFiles('FileFinder_19/poetry.lock') }}
           restore-keys: |
             venv-
@@ -70,4 +69,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: file-type-counts
-          path: ./FileTypeCounts_*.csv
+          path: FileTypeCounts_*.csv
