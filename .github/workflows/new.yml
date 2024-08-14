@@ -52,18 +52,18 @@ jobs:
       - name: Run PowerShell Script
         run: pwsh ./PowerShell/PS__ArunV2_Final_8Feb2024.ps1
 
-      - name: Install MySQL Client 
+      - name: Install MySQL Client
         run: choco install mysql
 
       - name: Run SQL Scripts
         run: |
           mysql -h ${{ secrets.MYSQL_HOST }} -P ${{ secrets.MYSQL_PORT }} \
           -u ${{ secrets.MYSQL_USER }} -p${{ secrets.MYSQL_PASSWORD }} \
-          ${{ secrets.MYSQL_DATABASE }} < ./SQLScripts/lisney_files_info8_bp_14Feb2024.sql
+          ${{ secrets.MYSQL_DATABASE }} < SQLScripts/lisney_files_info8_bp_14Feb2024.sql
           
           mysql -h ${{ secrets.MYSQL_HOST }} -P ${{ secrets.MYSQL_PORT }} \
           -u ${{ secrets.MYSQL_USER }} -p${{ secrets.MYSQL_PASSWORD }} \
-          ${{ secrets.MYSQL_DATABASE }} < ./SQLScripts/sql_Cased_Dimensions14Jan2024_v2.sql
+          ${{ secrets.MYSQL_DATABASE }} < SQLScripts/sql_Cased_Dimensions14Jan2024_v2.sql
 
       - name: Upload CSV file as artifact
         uses: actions/upload-artifact@v2
